@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#navbarSupportedContent {
+    padding-left: 900px;
+}
+
+.banner-image {
+    background-image: url('../img/banner-img.jpg');
+    background-size: cover;
+}
+
+main{
+    background-image: url('../img/blog.png');
+    width:1688px;
+    height: 850px;
+}
+form{
+    padding-top:200px;
+    padding-left: 600px;
+    padding-right: 600px;
+}
+button{
+    padding-left: 700px;
+}

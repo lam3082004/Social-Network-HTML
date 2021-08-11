@@ -1,0 +1,60 @@
+body {
+    font-family: 'Roboto Slab', serif;
+    background: #DAE2F8;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #D6A4A4, #DAE2F8);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #D6A4A4, #DAE2F8);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.h1-tag{
+    text-align: center;
+    margin-top: 4%;
+}
+.form-content-section{
+    width: 50%;
+    margin-top: 3%;
+    margin-left: 25%;
+}
+@media screen and (max-width: 600px){
+    .form-content-section{
+        width: 100%;
+        margin-top: 10%;
+        margin-left: 0;
+    }
+}   
+
+@media screen and (max-width: 800px){
+    .form-content-section{
+        width: 100%;
+        margin-top: 10%;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .form-group{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .btn-primary{
+        margin-left: 10px;
+    }
+}
+@media screen and (max-width: 800px){
+    .form-group{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .btn-primary{
+        margin-left: 20px;
+    }
+}
+.myclass{
+    border-radius: 20px;
+}
+main{
+    width:1688px;
+    height: 850px;
+}
