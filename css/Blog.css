@@ -318,9 +318,9 @@ div {
     background-color: var(--comment-background);
 }
 
-.abiwlrkh {
+/* .abiwlrkh {
     -webkit-user-select: none;
-}
+} */
 
 .r7d6kgcz {
     border-left: 0;
@@ -440,7 +440,7 @@ div {
     text-align: inherit;
 }
 .abiwlrkh {
-    -webkit-user-select: none;
+    /* -webkit-user-select: none; */
 }
 .p7hjln8o {
     list-style: none;
