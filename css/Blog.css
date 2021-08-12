@@ -14,8 +14,9 @@ body {
 
 main{
     background-image: url('../img/blog.png');
-    width:1688px;
-    height: 850px;
+    width:100%;
+    height: 100%;
+    height:900px;
 }
 form{
     padding-top:200px;

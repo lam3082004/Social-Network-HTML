@@ -10,12 +10,15 @@ body {
 
 .h1-tag{
     text-align: center;
-    margin-top: 4%;
+    margin-top: 7%;
+    padding-top:30px;
+        /* margin-left: 20%; */
 }
 .form-content-section{
     width: 50%;
-    margin-top: 3%;
-    margin-left: 25%;
+    margin-top: 2%;
+    margin-left: 26%;
+    padding-bottom: 3%;
 }
 @media screen and (max-width: 600px){
     .form-content-section{
@@ -55,6 +58,8 @@ body {
     border-radius: 20px;
 }
 main{
-    width:1688px;
-    height: 850px;
+    /* width:1519.2px;
+    height: 750px; */
+    width: 100%;
+    height:100%;
 }
