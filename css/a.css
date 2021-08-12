@@ -8,6 +8,23 @@ body {
 }
 
 .banner-image {
-    background-image: url('../img/banner-img.jpg');
+    background-image: url('../images/banner-img.jpg');
     background-size: cover;
+}
+img{
+	width:35px;
+	border-radius: 60%;
+	margin-right:10px;
+}
+#dark-btn{
+	position: absolute;
+	top:20px;
+	right:20px;
+	background:#ddd;
+	width:45px;
+	border-radius:15px;
+	padding:2px 3px;
+	cursor: pointer;
+	display: flex;
+	transition: padding-left 0.5s, background 0.5s;
 }

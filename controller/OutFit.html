@@ -1,1617 +1,442 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="../css/OutFit.css">
-    <!-- <link rel="stylesheet" type="text/js" href="./js/a.js"> -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-    <header>
-        <nav class="navbar fixed-top navbar-expand-lg navbar-light p-md-3">
-            <div class="container">
-                <a class="navbar-brand black-5" href="../a.html">Now Fit</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <div class="mx-auto"></div>
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="../b.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-black-50" href="./OutFit.html">OutFit</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="./Blog.html">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="./feedback.html">Feedback</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Contact</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-white" id="navbarDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Hữu Trường
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="./setting.html">Chế độ tối</a>
-                                <a class="dropdown-item" href="./setting.html">Setting</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="./Login.html">Logout</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        <div class="banner-image w-100 vh-100 d-flex justify-content-center align-items-center">
-            <div class="content text-center">
-                <!-- <h1 class="text-white">Bạn đang tìm kiếm mẫu thời trang???</h1> -->
-                </br>
-                </br>
-                </br>
+    <nav>
+        <h2>NOWFIT</h2>
+        <div class="search-box">
+            <img src="images/search.png">
+            <input type="text" placeholder="Search">
+        </div>
+        <div class="nav-left">
+            <!-- <img src="images/logo.png" class="logo"> -->
+            <ul>
+                <li>
+                    <img src="images/video.png">
+                </li>
+                <li>
+                    <img src="images/inbox.png">
+                </li>
+                <li>
+                    <img src="images/notification.png">
+                </li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <div class="nav-user-icon online" onclick="settingsMenuToggle();">
+                <img src="images/profile-pic.png">
             </div>
         </div>
-    </header>
-    <main>
-        <aside class="dqdt-sidebar sidebar left-content col-lg-3 col-md-3 col-xs-12 col-lg-3-fix sidebar-category">
-            <div class="aside-filter">
-                <div class="filter-container">
-                    <div class="filter-container__selected-filter" style="display: none;">
-                        <div class="filter-container__selected-filter-header clearfix">
-                            <span class="filter-container__selected-filter-header-title"><i
-                                    class="fa fa-arrow-left hidden-sm-up"></i> Bạn chọn</span>
-                            <a href="javascript:void(0)" onclick="clearAllFiltered()"
-                                class="filter-container__clear-all">Bỏ
-                                hết
-                                <i class="fa fa-angle-right"></i></a>
-                        </div>
-                        <div class="filter-container__selected-filter-list">
-                            <ul></ul>
-                        </div>
+        <div class="settings-menu">
+            <div id="dark-btn">
+                <span></span>
+            </div>
+            <div class="settings-menu-inner">
+                <div class="user-profile">
+                    <img src="images/profile-pic.png">
+                    <div>
+                        <p>Hữu Trường</p>
+                        <a href="#">See Your Profile</a>
                     </div>
                 </div>
-                <!-- Lọc Hãng -->
 
-
-                <aside class="aside-item sidebar-category collection-category dmsp">
-                    <div class="aside-title ">
-                        <h2 class="title-head margin-top-0 ">
-                            <span>Danh mục sản phẩm</span>
-                        </h2>
-                        <i class="fa fa-angle-down"></i>
-                    </div>
-                    <div class="aside-content">
-                        <nav class="nav-category navbar-toggleable-md">
-                            <ul class="nav navbar-pills">
-
-
-                                <li class="nav-item lv1 filter-item--green">
-                                    <a href="/dep-1" title="Dép" class="nav-link">Dép</a>
-                                    <i class="fas fa-angle-right fa"></i>
-                                    <ul class="dropdown-menu">
-
-
-
-                                        <li class="nav-item lv2">
-                                            <a class="nav-link" title="NIKE BENASSI" href="/nike-benassi">NIKE
-                                                BENASSI</a>
-                                        </li>
-
-
-
-
-
-                                        <li class="nav-item lv2">
-                                            <a class="nav-link" title="NIKE KAWA" href="/nike-kawa">NIKE KAWA</a>
-                                        </li>
-
-
-
-
-
-                                        <li class="nav-item lv2">
-                                            <a class="nav-link" title="NIKE SOLARSOFT" href="/nike-solarsoft">NIKE
-                                                SOLARSOFT</a>
-                                        </li>
-
-
-
-
-
-                                        <li class="nav-item lv2">
-                                            <a class="nav-link" title="ADIDAS ADILETTE" href="/adidas-adilette">ADIDAS
-                                                ADILETTE</a>
-                                        </li>
-
-
-
-
-
-                                        <li class="nav-item lv2">
-                                            <a class="nav-link" title="ADIDAS CLOUDFOAM"
-                                                href="/adidas-cloudfoam-1">ADIDAS
-                                                CLOUDFOAM</a>
-                                        </li>
-
-
-
-
-
-                                        <li class="nav-item lv2">
-                                            <a class="nav-link" title="ADIDAS ALPHABOUCE"
-                                                href="/adidas-alphabouce">ADIDAS
-                                                ALPHABOUCE</a>
-                                        </li>
-
-
-
-
-
-                                        <li class="nav-item lv2">
-                                            <a class="nav-link" title="JORDAN HYDRO" href="/jordan-hydro">JORDAN
-                                                HYDRO</a>
-                                        </li>
-
-
-
-
-
-                                        <li class="nav-item lv2">
-                                            <a class="nav-link" title="ADIDAS SANDAL" href="/adidas-sandal-1">ADIDAS
-                                                SANDAL</a>
-                                        </li>
-
-
-
-                                    </ul>
-                                </li>
-
-
-
-                                <li class="nav-item lv1 filter-item--green">
-                                    <a href="/giay-1" title="Giày" class="nav-link">Giày</a>
-                                    <i class="fas fa-angle-right fa"></i>
-                                    <ul class="dropdown-menu">
-
-
-
-                                        <li class="nav-item lv2">
-                                            <a class="nav-link" title="GIÀY JORDAN" href="/giay-jordan">GIÀY JORDAN</a>
-                                        </li>
-
-
-
-
-                                        <li class="nav-item lv2">
-                                            <a class="nav-link" title="GIÀY NIKE" href="/gia-y-nike">GIÀY NIKE</a>
-                                            <i class="fas fa-angle-right fa"></i>
-                                            <ul class="dropdown-menu">
-
-
-                                                <li class="nav-item lv3">
-                                                    <a class="nav-link" title="NIKE AIR JORDAN"
-                                                        href="/nike-air-jordan">NIKE
-                                                        AIR
-                                                        JORDAN</a>
-                                                </li>
-
-
-                                                <li class="nav-item lv3">
-                                                    <a class="nav-link" title="NIKE AIR FORCE 1"
-                                                        href="/nike-air-force-1">NIKE
-                                                        AIR FORCE 1</a>
-                                                </li>
-
-
-                                                <li class="nav-item lv3">
-                                                    <a class="nav-link" title="NIKE AIR MAX" href="/nike-air-max">NIKE
-                                                        AIR
-                                                        MAX</a>
-                                                </li>
-
-
-                                                <li class="nav-item lv3">
-                                                    <a class="nav-link" title="NIKE AIR MORE UPTEMPO"
-                                                        href="/nike-air-more-uptempo">NIKE AIR MORE UPTEMPO</a>
-                                                </li>
-
-
-                                                <li class="nav-item lv3">
-                                                    <a class="nav-link" title="NIKE AIR ZOOM" href="/nike-air-zoom">NIKE
-                                                        AIR
-                                                        ZOOM</a>
-                                                </li>
-
-
-                                                <li class="nav-item lv3">
-                                                    <a class="nav-link" title="NIKE CORTEZ" href="/nike-cortez">NIKE
-                                                        CORTEZ</a>
-                                                </li>
-
-
-                                                <li class="nav-item lv3">
-                                                    <a class="nav-link" title="NIKE EBERNON" href="/nike-ebernon">NIKE
-                                                        EBERNON</a>
-                                                </li>
-
-
-                                                <li class="nav-item lv3">
-                                                    <a class="nav-link" title="NIKE EPIC REACT"
-                                                        href="/nike-epic-react">NIKE
-                                                        EPIC REACT</a>
-                                                </li>
-
-
-                                                <li class="nav-item lv3">
-                                                    <a class="nav-link" title="NIKE ROSHE RUN"
-                                                        href="/nike-roshe-run">NIKE
-                                                        ROSHE
-                                                        RUN</a>
-                                                </li>
-
-
-                                                <li class="nav-item lv3">
-                                                    <a class="nav-link" title="NIKE M2K TEKNO"
-                                                        href="/nike-m2k-tekno">NIKE
-                                                        M2K
-                                                        TEKNO</a>
-                                                </li>
-
-
-                                                <li class="nav-item lv3">
-                                                    <a class="nav-link" title="NIKE VAPORMAX" href="/nike-vapormax">NIKE
-                                                        VAPORMAX</a>
-                                                </li>
-
-
-                                                <li class="nav-item lv3">
-                                                    <a class="nav-link" title="NIKE TANJUN" href="/nike-tanjun">NIKE
-                                                        TANJUN</a>
-                                                </li>
-
-
-                                                <li class="nav-item lv3">
-                                                    <a class="nav-link" title="NIKE STEFAN JANOSKI"
-                                                        href="/nike-stefan-janoski">NIKE STEFAN JANOSKI</a>
-                                                </li>
-
-                                            </ul>
-
-                                        </li>
-
-
-
-
-
-                                        <li class="nav-item lv2">
-                                            <a class="nav-link" title="GIÀY ADIDAS" href="/gia-y-adidas">GIÀY
-                                                ADIDAS</a>
-                                            <i class="fas fa-angle-right fa"></i>
-                                            <ul class="dropdown-menu">
-
-
-                                                <li class="nav-item lv3">
-                                                    <a class="nav-link" title="ADIDAS ALPHABOUNCE"
-                                                        href="/adidas-alphabounce">ADIDAS ALPHABOUNCE</a>
-                                                </li>
-
-
-                                                <li class="nav-item lv3">
-                                                    <a class="nav-link" title="ADIDAS ALPHAEDGE 4D"
-                                                        href="/adidas-alphaedge-4d">ADIDAS ALPHAEDGE 4D</a>
-                                                </li>
-
-
-                                                <li class="nav-item lv3">
-                                                    <a class="nav-link" title="ADIDAS CONTINENTAL"
-                                                        href="/adidas-continental">ADIDAS CONTINENTAL</a>
-                                                </li>
-
-
-                                                <li class="nav-item lv3">
-                                                    <a class="nav-link" title="ADIDAS CLIMACOOL"
-                                                        href="/adidas-climacool">ADIDAS
-                                                        CLIMACOOL</a>
-                                                </li>
-
-
-                                                <li class="nav-item lv3">
-                                                    <a class="nav-link" title="ADIDAS CLOUDFOAM"
-                                                        href="/adidas-cloudfoam">ADIDAS
-                                                        CLOUDFOAM</a>
-                                                </li>
-
-
-                                                <li class="nav-item lv3">
-                                                    <a class="nav-link" title="ADIDAS CAMPUS"
-                                                        href="/adidas-campus">ADIDAS
-                                                        CAMPUS</a>
-                                                </li>
-
-
-                                                <li class="nav-item lv3">
-                                                    <a class="nav-link" title="ADIDAS EQUIPMENT (EQT)"
-                                                        href="/adidas-equipment-eqt">ADIDAS EQUIPMENT (EQT)</a>
-                                                </li>
-
-
-                                                <li class="nav-item lv3">
-                                                    <a class="nav-link" title="ADIDAS FALCON"
-                                                        href="/adidas-falcon">ADIDAS
-                                                        FALCON</a>
-                                                </li>
-
-
-                                                <li class="nav-item lv3">
-                                                    <a class="nav-link" title="ADIDAS HUMAN RACE"
-                                                        href="/adidas-human-race">ADIDAS HUMAN RACE</a>
-                                                </li>
-
-
-                                                <li class="nav-item lv3">
-                                                    <a class="nav-link" title="ADIDAS INIKI" href="/adidas-iniki">ADIDAS
-                                                        INIKI</a>
-                                                </li>
-
-
-                                                <li class="nav-item lv3">
-                                                    <a class="nav-link" title="ADIDAS KAMANDA"
-                                                        href="/adidas-kamanda">ADIDAS
-                                                        KAMANDA</a>
-                                                </li>
-
-
-                                                <li class="nav-item lv3">
-                                                    <a class="nav-link" title="ADIDAS NMD" href="/adidas-nmd">ADIDAS
-                                                        NMD</a>
-                                                </li>
-
-
-                                                <li class="nav-item lv3">
-                                                    <a class="nav-link" title="ADIDAS NITE JOGGER"
-                                                        href="/adidas-nite-jogger">ADIDAS NITE JOGGER</a>
-                                                </li>
-
-
-                                                <li class="nav-item lv3">
-                                                    <a class="nav-link" title="ADIDAS N-5923"
-                                                        href="/adidas-n-5923">ADIDAS
-                                                        N-5923</a>
-                                                </li>
-
-
-                                                <li class="nav-item lv3">
-                                                    <a class="nav-link" title="ADIDAS OZWEEGO"
-                                                        href="/adidas-ozweego">ADIDAS
-                                                        OZWEEGO</a>
-                                                </li>
-
-
-                                                <li class="nav-item lv3">
-                                                    <a class="nav-link" title="ADIDAS PROPHERE"
-                                                        href="/adidas-prophere">ADIDAS
-                                                        PROPHERE</a>
-                                                </li>
-
-
-                                                <li class="nav-item lv3">
-                                                    <a class="nav-link" title="ADIDAS PUREBOOST"
-                                                        href="/adidas-pureboost">ADIDAS
-                                                        PUREBOOST</a>
-                                                </li>
-
-
-                                                <li class="nav-item lv3">
-                                                    <a class="nav-link" title="ADIDAS STAN SMITH"
-                                                        href="/adidas-stan-smith">ADIDAS STAN SMITH</a>
-                                                </li>
-
-
-                                                <li class="nav-item lv3">
-                                                    <a class="nav-link" title="ADIDAS SUPERSTAR"
-                                                        href="/adidas-superstar">ADIDAS
-                                                        SUPERSTAR</a>
-                                                </li>
-
-
-                                                <li class="nav-item lv3">
-                                                    <a class="nav-link" title="ADIDAS SWIFT RUN"
-                                                        href="/adidas-swift-run">ADIDAS
-                                                        SWIFT RUN</a>
-                                                </li>
-
-
-                                                <li class="nav-item lv3">
-                                                    <a class="nav-link" title="ADIDAS SOLAR HU"
-                                                        href="/adidas-solar-hu">ADIDAS
-                                                        SOLAR HU</a>
-                                                </li>
-
-
-                                                <li class="nav-item lv3">
-                                                    <a class="nav-link" title="ADIDAS TUBULAR"
-                                                        href="/adidas-tubular">ADIDAS
-                                                        TUBULAR</a>
-                                                </li>
-
-
-                                                <li class="nav-item lv3">
-                                                    <a class="nav-link" title="ADIDAS ULTRABOOST"
-                                                        href="/adidas-ultraboost">ADIDAS ULTRABOOST</a>
-                                                </li>
-
-
-                                                <li class="nav-item lv3">
-                                                    <a class="nav-link" title="ADIDAS X_PLR" href="/adidas-x-plr">ADIDAS
-                                                        X_PLR</a>
-                                                </li>
-
-
-                                                <li class="nav-item lv3">
-                                                    <a class="nav-link" title="ADIDAS YUNG" href="/adidas-yung">ADIDAS
-                                                        YUNG</a>
-                                                </li>
-
-
-                                                <li class="nav-item lv3">
-                                                    <a class="nav-link" title="ADIDAS YEZZY" href="/adidas-yezzy">ADIDAS
-                                                        YEZZY</a>
-                                                </li>
-
-
-                                                <li class="nav-item lv3">
-                                                    <a class="nav-link" title="ADIDAS ZX" href="/adidas-zx">ADIDAS
-                                                        ZX</a>
-                                                </li>
-
-                                            </ul>
-
-                                        </li>
-
-
-
-
-                                    </ul>
-                                </li>
-
-
-
-                                <li class="nav-item lv1 filter-item--green">
-                                    <a class="nav-link" title="Phụ kiện" href="/phu-kien-1">Phụ kiện</a>
-                                </li>
-
-
-
-                            </ul>
-                        </nav>
-                    </div>
-                </aside>
-
-
-
-
-                <aside class="aside-item filter-vendor">
-                    <div class="aside-title">
-                        <h2 class="title-head margin-top-0"><span>Thương hiệu</span></h2>
-                        <i class="fa fa-angle-down"></i>
-
-                    </div>
-                    <div class="aside-content filter-group">
-                        <ul>
-
-
-
-
-
-
-
-
-                            <li class="filter-item filter-item--check-box filter-item--green ">
-                                <span>
-                                    <label for="filter-dragonadidas">
-                                        <input type="checkbox" id="filter-dragonadidas" data-group="Hãng"
-                                            data-field="vendor" data-text="Adidas" value="(Adidas)" data-operator="OR">
-                                        <i class="fa"></i>
-                                        Adidas
-                                    </label>
-                                </span>
-                            </li>
-
-
-
-
-
-                            <li class="filter-item filter-item--check-box filter-item--green ">
-                                <span>
-                                    <label for="filter-dragonjordan">
-                                        <input type="checkbox" id="filter-dragonjordan" data-group="Hãng"
-                                            data-field="vendor" data-text="Jordan" value="(Jordan)" data-operator="OR">
-                                        <i class="fa"></i>
-                                        Jordan
-                                    </label>
-                                </span>
-                            </li>
-
-
-
-
-
-                            <li class="filter-item filter-item--check-box filter-item--green ">
-                                <span>
-                                    <label for="filter-dragonnike">
-                                        <input type="checkbox" id="filter-dragonnike" data-group="Hãng"
-                                            data-field="vendor" data-text="Nike" value="(Nike)" data-operator="OR">
-                                        <i class="fa"></i>
-                                        Nike
-                                    </label>
-                                </span>
-                            </li>
-
-
-
-
-                        </ul>
-                    </div>
-                </aside>
-
-
-                <!-- End lọc hãng -->
-
-                <!-- Lọc giá -->
-
-
-
-                <aside class="aside-item filter-price">
-                    <div class="aside-title">
-                        <h2 class="title-head margin-top-0"><span>Khoảng giá</span></h2>
-                        <i class="fa fa-angle-down"></i>
-
-                    </div>
-                    <div class="aside-content filter-group">
-                        <ul>
-
-
-
-
-
-                            <li class="filter-item filter-item--check-box filter-item--green">
-                                <span>
-                                    <label data-filter="100-000d" for="filter-duoi-100-000d">
-                                        <input type="checkbox" id="filter-duoi-100-000d" data-group="Khoảng giá"
-                                            data-field="price_min" data-text="Dưới 100.000đ" value="(<1000000)"
-                                            data-operator="OR">
-                                        <i class="fa"></i>
-
-                                        Giá dưới 1.000.000₫
-                                    </label>
-                                </span>
-                            </li>
-
-
-
-
-
-
-
-                            <li class="filter-item filter-item--check-box filter-item--green">
-                                <span>
-                                    <label data-filter="200-000d" for="filter-100-000d-200-000d">
-                                        <input type="checkbox" id="filter-100-000d-200-000d" data-group="Khoảng giá"
-                                            data-field="price_min" data-text="100.000đ - 200.000đ"
-                                            value="(>=1000000 AND <=2000000)" data-operator="OR">
-                                        <i class="fa"></i>
-
-
-
-
-                                        1.000.000₫ - 2.000.000₫
-                                    </label>
-                                </span>
-                            </li>
-
-
-
-
-
-
-                            <li class="filter-item filter-item--check-box filter-item--green">
-                                <span>
-                                    <label data-filter="300-000d" for="filter-200-000d-300-000d">
-                                        <input type="checkbox" id="filter-200-000d-300-000d" data-group="Khoảng giá"
-                                            data-field="price_min" data-text="200.000đ - 300.000đ"
-                                            value="(>=2000000 AND <=3000000)" data-operator="OR">
-                                        <i class="fa"></i>
-
-
-
-
-                                        2.000.000₫ - 3.000.000₫
-                                    </label>
-                                </span>
-                            </li>
-
-
-
-
-
-
-                            <li class="filter-item filter-item--check-box filter-item--green">
-                                <span>
-                                    <label data-filter="500-000d" for="filter-300-000d-500-000d">
-                                        <input type="checkbox" id="filter-300-000d-500-000d" data-group="Khoảng giá"
-                                            data-field="price_min" data-text="300.000đ - 500.000đ"
-                                            value="(>=3000000 AND <=4000000)" data-operator="OR">
-                                        <i class="fa"></i>
-
-
-
-
-                                        3.000.000₫ - 4.000.000₫
-                                    </label>
-                                </span>
-                            </li>
-
-
-
-
-
-
-                            <li class="filter-item filter-item--check-box filter-item--green">
-                                <span>
-                                    <label data-filter="1-000-000d" for="filter-500-000d-1-000-000d">
-                                        <input type="checkbox" id="filter-500-000d-1-000-000d" data-group="Khoảng giá"
-                                            data-field="price_min" data-text="500.000đ - 1.000.000đ"
-                                            value="(>=4000000 AND <=5000000)" data-operator="OR">
-                                        <i class="fa"></i>
-
-
-
-
-                                        4.000.000₫ - 5.000.000₫ </label>
-                                </span>
-                            </li>
-                            <li class="filter-item filter-item--check-box filter-item--green">
-                                <span>
-                                    <label data-filter="1-000-000d" for="filter-tren1-000-000d">
-                                        <input type="checkbox" id="filter-tren1-000-000d" data-group="Khoảng giá"
-                                            data-field="price_min" data-text="Trên 1.000.000đ" value="(>5000000)"
-                                            data-operator="OR">
-                                        <i class="fa"></i>
-
-
-
-
-                                        Giá trên 5.000.000₫
-                                    </label>
-                                </span>
-                            </li>
-
-
-
-                        </ul>
-                    </div>
-                </aside>
-
-
-
-                <!-- End Lọc giá -->
-                <!-- Lọc Loại -->
-
-                <!-- Lọc theo tag-->
-
-                <aside class="aside-item filter-tag-style">
-                    <div class="aside-title">
-                        <h2 class="title-head margin-top-0"><span>Chi nhánh</span></h2>
-                        <i class="fa fa-angle-down"></i>
-                    </div>
-                    <div class="aside-content filter-group clearfix">
-                        <ul style="overflow: visible;">
-
-
-                            <li class="filter-item  filter-item--check-box filter-item--green">
-                                <span>
-                                    <label for="filter-tag1-1">
-                                        <input type="checkbox" id="filter-tag1-1" data-group="tag2" data-field="tags"
-                                            data-text="Chi nhánh HBT-Quận1" value="(Chi nhánh HBT-Quận1)"
-                                            data-operator="OR">
-                                        <i class="fa vang" style="background-color:#F1C40F;"></i>
-                                        Chi nhánh HBT-Quận1
-                                    </label>
-                                </span>
-                            </li>
-
-                            <li class="filter-item  filter-item--check-box filter-item--green">
-                                <span>
-                                    <label for="filter-tag1-2">
-                                        <input type="checkbox" id="filter-tag1-2" data-group="tag2" data-field="tags"
-                                            data-text="Chi nhánh CMT8-Quận10" value="(Chi nhánh CMT8-Quận10)"
-                                            data-operator="OR">
-                                        <i class="fa vang" style="background-color:#F1C40F;"></i>
-                                        Chi nhánh CMT8-Quận10
-                                    </label>
-                                </span>
-                            </li>
-
-                        </ul>
-                    </div>
-                </aside>
-
-                <!--End Lọc theo tag-->
-
-                <!-- End Lọc Loại -->
-                <!-- Lọc theo Tag (Màu sắc)-->
-
-                <aside class="aside-item filter-tag-style filter-tag-style-size">
-                    <div class="aside-title">
-                        <h2 class="title-head margin-top-0"><span>Kích cỡ (Nike, Adidas, Jordan,...)</span></h2>
-                        <i class="fa fa-angle-down"></i>
-                    </div>
-                    <div class="aside-content filter-group clearfix">
-                        <ul style="overflow: visible;">
-
-
-                            <li class="filter-item  filter-item--check-box filter-item--green">
-                                <span>
-                                    <label for="filter-tmt1">
-                                        <input type="checkbox" id="filter-tmt1" data-group="tagtmt"
-                                            data-field="variants.title" data-text="35" value="(35)" data-operator="OR">
-                                        <i class="fa vang" style="background-color:#F1C40F;"></i>
-                                        35
-                                    </label>
-                                </span>
-                            </li>
-
-                            <li class="filter-item  filter-item--check-box filter-item--green">
-                                <span>
-                                    <label for="filter-tmt2">
-                                        <input type="checkbox" id="filter-tmt2" data-group="tagtmt"
-                                            data-field="variants.title" data-text="35.5" value="(35.5)"
-                                            data-operator="OR">
-                                        <i class="fa vang" style="background-color:#F1C40F;"></i>
-                                        35.5
-                                    </label>
-                                </span>
-                            </li>
-
-                            <li class="filter-item  filter-item--check-box filter-item--green">
-                                <span>
-                                    <label for="filter-tmt3">
-                                        <input type="checkbox" id="filter-tmt3" data-group="tagtmt"
-                                            data-field="variants.title" data-text="36" value="(36)" data-operator="OR">
-                                        <i class="fa vang" style="background-color:#F1C40F;"></i>
-                                        36
-                                    </label>
-                                </span>
-                            </li>
-
-                            <li class="filter-item  filter-item--check-box filter-item--green">
-                                <span>
-                                    <label for="filter-tmt4">
-                                        <input type="checkbox" id="filter-tmt4" data-group="tagtmt"
-                                            data-field="variants.title" data-text="36.5" value="(36.5)"
-                                            data-operator="OR">
-                                        <i class="fa vang" style="background-color:#F1C40F;"></i>
-                                        36.5
-                                    </label>
-                                </span>
-                            </li>
-
-                            <li class="filter-item  filter-item--check-box filter-item--green">
-                                <span>
-                                    <label for="filter-tmt5">
-                                        <input type="checkbox" id="filter-tmt5" data-group="tagtmt"
-                                            data-field="variants.title" data-text="36.7" value="(36.7)"
-                                            data-operator="OR">
-                                        <i class="fa vang" style="background-color:#F1C40F;"></i>
-                                        36.7
-                                    </label>
-                                </span>
-                            </li>
-
-                            <li class="filter-item  filter-item--check-box filter-item--green">
-                                <span>
-                                    <label for="filter-tmt6">
-                                        <input type="checkbox" id="filter-tmt6" data-group="tagtmt"
-                                            data-field="variants.title" data-text="37" value="(37)" data-operator="OR">
-                                        <i class="fa vang" style="background-color:#F1C40F;"></i>
-                                        37
-                                    </label>
-                                </span>
-                            </li>
-
-                            <li class="filter-item  filter-item--check-box filter-item--green">
-                                <span>
-                                    <label for="filter-tmt7">
-                                        <input type="checkbox" id="filter-tmt7" data-group="tagtmt"
-                                            data-field="variants.title" data-text="37.3" value="(37.3)"
-                                            data-operator="OR">
-                                        <i class="fa vang" style="background-color:#F1C40F;"></i>
-                                        37.3
-                                    </label>
-                                </span>
-                            </li>
-
-                            <li class="filter-item  filter-item--check-box filter-item--green">
-                                <span>
-                                    <label for="filter-tmt8">
-                                        <input type="checkbox" id="filter-tmt8" data-group="tagtmt"
-                                            data-field="variants.title" data-text="37.5" value="(37.5)"
-                                            data-operator="OR">
-                                        <i class="fa vang" style="background-color:#F1C40F;"></i>
-                                        37.5
-                                    </label>
-                                </span>
-                            </li>
-
-                            <li class="filter-item  filter-item--check-box filter-item--green">
-                                <span>
-                                    <label for="filter-tmt9">
-                                        <input type="checkbox" id="filter-tmt9" data-group="tagtmt"
-                                            data-field="variants.title" data-text="38" value="(38)" data-operator="OR">
-                                        <i class="fa vang" style="background-color:#F1C40F;"></i>
-                                        38
-                                    </label>
-                                </span>
-                            </li>
-
-                            <li class="filter-item  filter-item--check-box filter-item--green">
-                                <span>
-                                    <label for="filter-tmt10">
-                                        <input type="checkbox" id="filter-tmt10" data-group="tagtmt"
-                                            data-field="variants.title" data-text="38.5" value="(38.5)"
-                                            data-operator="OR">
-                                        <i class="fa vang" style="background-color:#F1C40F;"></i>
-                                        38.5
-                                    </label>
-                                </span>
-                            </li>
-
-                            <li class="filter-item  filter-item--check-box filter-item--green">
-                                <span>
-                                    <label for="filter-tmt11">
-                                        <input type="checkbox" id="filter-tmt11" data-group="tagtmt"
-                                            data-field="variants.title" data-text="38.7" value="(38.7)"
-                                            data-operator="OR">
-                                        <i class="fa vang" style="background-color:#F1C40F;"></i>
-                                        38.7
-                                    </label>
-                                </span>
-                            </li>
-
-                            <li class="filter-item  filter-item--check-box filter-item--green">
-                                <span>
-                                    <label for="filter-tmt12">
-                                        <input type="checkbox" id="filter-tmt12" data-group="tagtmt"
-                                            data-field="variants.title" data-text="39" value="(39)" data-operator="OR">
-                                        <i class="fa vang" style="background-color:#F1C40F;"></i>
-                                        39
-                                    </label>
-                                </span>
-                            </li>
-
-                            <li class="filter-item  filter-item--check-box filter-item--green">
-                                <span>
-                                    <label for="filter-tmt13">
-                                        <input type="checkbox" id="filter-tmt13" data-group="tagtmt"
-                                            data-field="variants.title" data-text="39.3" value="(39.3)"
-                                            data-operator="OR">
-                                        <i class="fa vang" style="background-color:#F1C40F;"></i>
-                                        39.3
-                                    </label>
-                                </span>
-                            </li>
-
-                            <li class="filter-item  filter-item--check-box filter-item--green">
-                                <span>
-                                    <label for="filter-tmt14">
-                                        <input type="checkbox" id="filter-tmt14" data-group="tagtmt"
-                                            data-field="variants.title" data-text="40" value="(40)" data-operator="OR">
-                                        <i class="fa vang" style="background-color:#F1C40F;"></i>
-                                        40
-                                    </label>
-                                </span>
-                            </li>
-
-                            <li class="filter-item  filter-item--check-box filter-item--green">
-                                <span>
-                                    <label for="filter-tmt15">
-                                        <input type="checkbox" id="filter-tmt15" data-group="tagtmt"
-                                            data-field="variants.title" data-text="40.5" value="(40.5)"
-                                            data-operator="OR">
-                                        <i class="fa vang" style="background-color:#F1C40F;"></i>
-                                        40.5
-                                    </label>
-                                </span>
-                            </li>
-
-                            <li class="filter-item  filter-item--check-box filter-item--green">
-                                <span>
-                                    <label for="filter-tmt16">
-                                        <input type="checkbox" id="filter-tmt16" data-group="tagtmt"
-                                            data-field="variants.title" data-text="40.7" value="(40.7)"
-                                            data-operator="OR">
-                                        <i class="fa vang" style="background-color:#F1C40F;"></i>
-                                        40.7
-                                    </label>
-                                </span>
-                            </li>
-
-                            <li class="filter-item  filter-item--check-box filter-item--green">
-                                <span>
-                                    <label for="filter-tmt17">
-                                        <input type="checkbox" id="filter-tmt17" data-group="tagtmt"
-                                            data-field="variants.title" data-text="41" value="(41)" data-operator="OR">
-                                        <i class="fa vang" style="background-color:#F1C40F;"></i>
-                                        41
-                                    </label>
-                                </span>
-                            </li>
-
-                            <li class="filter-item  filter-item--check-box filter-item--green">
-                                <span>
-                                    <label for="filter-tmt18">
-                                        <input type="checkbox" id="filter-tmt18" data-group="tagtmt"
-                                            data-field="variants.title" data-text="41.3" value="(41.3)"
-                                            data-operator="OR">
-                                        <i class="fa vang" style="background-color:#F1C40F;"></i>
-                                        41.3
-                                    </label>
-                                </span>
-                            </li>
-
-                            <li class="filter-item  filter-item--check-box filter-item--green">
-                                <span>
-                                    <label for="filter-tmt19">
-                                        <input type="checkbox" id="filter-tmt19" data-group="tagtmt"
-                                            data-field="variants.title" data-text="42" value="(42)" data-operator="OR">
-                                        <i class="fa vang" style="background-color:#F1C40F;"></i>
-                                        42
-                                    </label>
-                                </span>
-                            </li>
-
-                            <li class="filter-item  filter-item--check-box filter-item--green">
-                                <span>
-                                    <label for="filter-tmt20">
-                                        <input type="checkbox" id="filter-tmt20" data-group="tagtmt"
-                                            data-field="variants.title" data-text="42.5" value="(42.5)"
-                                            data-operator="OR">
-                                        <i class="fa vang" style="background-color:#F1C40F;"></i>
-                                        42.5
-                                    </label>
-                                </span>
-                            </li>
-
-                            <li class="filter-item  filter-item--check-box filter-item--green">
-                                <span>
-                                    <label for="filter-tmt21">
-                                        <input type="checkbox" id="filter-tmt21" data-group="tagtmt"
-                                            data-field="variants.title" data-text="42.7" value="(42.7)"
-                                            data-operator="OR">
-                                        <i class="fa vang" style="background-color:#F1C40F;"></i>
-                                        42.7
-                                    </label>
-                                </span>
-                            </li>
-
-                            <li class="filter-item  filter-item--check-box filter-item--green">
-                                <span>
-                                    <label for="filter-tmt22">
-                                        <input type="checkbox" id="filter-tmt22" data-group="tagtmt"
-                                            data-field="variants.title" data-text="43" value="(43)" data-operator="OR">
-                                        <i class="fa vang" style="background-color:#F1C40F;"></i>
-                                        43
-                                    </label>
-                                </span>
-                            </li>
-
-                            <li class="filter-item  filter-item--check-box filter-item--green">
-                                <span>
-                                    <label for="filter-tmt23">
-                                        <input type="checkbox" id="filter-tmt23" data-group="tagtmt"
-                                            data-field="variants.title" data-text="43.3" value="(43.3)"
-                                            data-operator="OR">
-                                        <i class="fa vang" style="background-color:#F1C40F;"></i>
-                                        43.3
-                                    </label>
-                                </span>
-                            </li>
-
-                            <li class="filter-item  filter-item--check-box filter-item--green">
-                                <span>
-                                    <label for="filter-tmt24">
-                                        <input type="checkbox" id="filter-tmt24" data-group="tagtmt"
-                                            data-field="variants.title" data-text="44" value="(44)" data-operator="OR">
-                                        <i class="fa vang" style="background-color:#F1C40F;"></i>
-                                        44
-                                    </label>
-                                </span>
-                            </li>
-
-                            <li class="filter-item  filter-item--check-box filter-item--green">
-                                <span>
-                                    <label for="filter-tmt25">
-                                        <input type="checkbox" id="filter-tmt25" data-group="tagtmt"
-                                            data-field="variants.title" data-text="44.5" value="(44.5)"
-                                            data-operator="OR">
-                                        <i class="fa vang" style="background-color:#F1C40F;"></i>
-                                        44.5
-                                    </label>
-                                </span>
-                            </li>
-
-                            <li class="filter-item  filter-item--check-box filter-item--green">
-                                <span>
-                                    <label for="filter-tmt26">
-                                        <input type="checkbox" id="filter-tmt26" data-group="tagtmt"
-                                            data-field="variants.title" data-text="44.7" value="(44.7)"
-                                            data-operator="OR">
-                                        <i class="fa vang" style="background-color:#F1C40F;"></i>
-                                        44.7
-                                    </label>
-                                </span>
-                            </li>
-
-                            <li class="filter-item  filter-item--check-box filter-item--green">
-                                <span>
-                                    <label for="filter-tmt27">
-                                        <input type="checkbox" id="filter-tmt27" data-group="tagtmt"
-                                            data-field="variants.title" data-text="45" value="(45)" data-operator="OR">
-                                        <i class="fa vang" style="background-color:#F1C40F;"></i>
-                                        45
-                                    </label>
-                                </span>
-                            </li>
-
-                            <li class="filter-item  filter-item--check-box filter-item--green">
-                                <span>
-                                    <label for="filter-tmt28">
-                                        <input type="checkbox" id="filter-tmt28" data-group="tagtmt"
-                                            data-field="variants.title" data-text="45" value="(45)" data-operator="OR">
-                                        <i class="fa vang" style="background-color:#F1C40F;"></i>
-                                        45
-                                    </label>
-                                </span>
-                            </li>
-
-                            <li class="filter-item  filter-item--check-box filter-item--green">
-                                <span>
-                                    <label for="filter-tmt29">
-                                        <input type="checkbox" id="filter-tmt29" data-group="tagtmt"
-                                            data-field="variants.title" data-text="45.3" value="(45.3)"
-                                            data-operator="OR">
-                                        <i class="fa vang" style="background-color:#F1C40F;"></i>
-                                        45.3
-                                    </label>
-                                </span>
-                            </li>
-
-                            <li class="filter-item  filter-item--check-box filter-item--green">
-                                <span>
-                                    <label for="filter-tmt30">
-                                        <input type="checkbox" id="filter-tmt30" data-group="tagtmt"
-                                            data-field="variants.title" data-text="45.5" value="(45.5)"
-                                            data-operator="OR">
-                                        <i class="fa vang" style="background-color:#F1C40F;"></i>
-                                        45.5
-                                    </label>
-                                </span>
-                            </li>
-
-                            <li class="filter-item  filter-item--check-box filter-item--green">
-                                <span>
-                                    <label for="filter-tmt31">
-                                        <input type="checkbox" id="filter-tmt31" data-group="tagtmt"
-                                            data-field="variants.title" data-text="46" value="(46)" data-operator="OR">
-                                        <i class="fa vang" style="background-color:#F1C40F;"></i>
-                                        46
-                                    </label>
-                                </span>
-                            </li>
-
-                            <li class="filter-item  filter-item--check-box filter-item--green">
-                                <span>
-                                    <label for="filter-tmt32">
-                                        <input type="checkbox" id="filter-tmt32" data-group="tagtmt"
-                                            data-field="variants.title" data-text="46.5" value="(46.5)"
-                                            data-operator="OR">
-                                        <i class="fa vang" style="background-color:#F1C40F;"></i>
-                                        46.5
-                                    </label>
-                                </span>
-                            </li>
-
-                            <li class="filter-item  filter-item--check-box filter-item--green">
-                                <span>
-                                    <label for="filter-tmt33">
-                                        <input type="checkbox" id="filter-tmt33" data-group="tagtmt"
-                                            data-field="variants.title" data-text="46.7" value="(46.7)"
-                                            data-operator="OR">
-                                        <i class="fa vang" style="background-color:#F1C40F;"></i>
-                                        46.7
-                                    </label>
-                                </span>
-                            </li>
-
-                            <li class="filter-item  filter-item--check-box filter-item--green">
-                                <span>
-                                    <label for="filter-tmt34">
-                                        <input type="checkbox" id="filter-tmt34" data-group="tagtmt"
-                                            data-field="variants.title" data-text="47" value="(47)" data-operator="OR">
-                                        <i class="fa vang" style="background-color:#F1C40F;"></i>
-                                        47
-                                    </label>
-                                </span>
-                            </li>
-
-                            <li class="filter-item  filter-item--check-box filter-item--green">
-                                <span>
-                                    <label for="filter-tmt35">
-                                        <input type="checkbox" id="filter-tmt35" data-group="tagtmt"
-                                            data-field="variants.title" data-text="47" value="(47)" data-operator="OR">
-                                        <i class="fa vang" style="background-color:#F1C40F;"></i>
-                                        47
-                                    </label>
-                                </span>
-                            </li>
-
-                            <li class="filter-item  filter-item--check-box filter-item--green">
-                                <span>
-                                    <label for="filter-tmt36">
-                                        <input type="checkbox" id="filter-tmt36" data-group="tagtmt"
-                                            data-field="variants.title" data-text="47.3" value="(47.3)"
-                                            data-operator="OR">
-                                        <i class="fa vang" style="background-color:#F1C40F;"></i>
-                                        47.3
-                                    </label>
-                                </span>
-                            </li>
-
-                            <li class="filter-item  filter-item--check-box filter-item--green">
-                                <span>
-                                    <label for="filter-tmt37">
-                                        <input type="checkbox" id="filter-tmt37" data-group="tagtmt"
-                                            data-field="variants.title" data-text="47" value="(47)" data-operator="OR">
-                                        <i class="fa vang" style="background-color:#F1C40F;"></i>
-                                        47
-                                    </label>
-                                </span>
-                            </li>
-
-                            <li class="filter-item  filter-item--check-box filter-item--green">
-                                <span>
-                                    <label for="filter-tmt38">
-                                        <input type="checkbox" id="filter-tmt38" data-group="tagtmt"
-                                            data-field="variants.title" data-text="48" value="(48)" data-operator="OR">
-                                        <i class="fa vang" style="background-color:#F1C40F;"></i>
-                                        48
-                                    </label>
-                                </span>
-                            </li>
-
-                            <li class="filter-item  filter-item--check-box filter-item--green">
-                                <span>
-                                    <label for="filter-tmt39">
-                                        <input type="checkbox" id="filter-tmt39" data-group="tagtmt"
-                                            data-field="variants.title" data-text="48.5" value="(48.5)"
-                                            data-operator="OR">
-                                        <i class="fa vang" style="background-color:#F1C40F;"></i>
-                                        48.5
-                                    </label>
-                                </span>
-                            </li>
-
-                            <li class="filter-item  filter-item--check-box filter-item--green">
-                                <span>
-                                    <label for="filter-tmt40">
-                                        <input type="checkbox" id="filter-tmt40" data-group="tagtmt"
-                                            data-field="variants.title" data-text="48.7" value="(48.7)"
-                                            data-operator="OR">
-                                        <i class="fa vang" style="background-color:#F1C40F;"></i>
-                                        48.7
-                                    </label>
-                                </span>
-                            </li>
-
-                            <li class="filter-item  filter-item--check-box filter-item--green">
-                                <span>
-                                    <label for="filter-tmt41">
-                                        <input type="checkbox" id="filter-tmt41" data-group="tagtmt"
-                                            data-field="variants.title" data-text="49" value="(49)" data-operator="OR">
-                                        <i class="fa vang" style="background-color:#F1C40F;"></i>
-                                        49
-                                    </label>
-                                </span>
-                            </li>
-
-                            <li class="filter-item  filter-item--check-box filter-item--green">
-                                <span>
-                                    <label for="filter-tmt42">
-                                        <input type="checkbox" id="filter-tmt42" data-group="tagtmt"
-                                            data-field="variants.title" data-text="49.5" value="(49.5)"
-                                            data-operator="OR">
-                                        <i class="fa vang" style="background-color:#F1C40F;"></i>
-                                        49.5
-                                    </label>
-                                </span>
-                            </li>
-
-                            <li class="filter-item  filter-item--check-box filter-item--green">
-                                <span>
-                                    <label for="filter-tmt43">
-                                        <input type="checkbox" id="filter-tmt43" data-group="tagtmt"
-                                            data-field="variants.title" data-text="49.3" value="(49.3)"
-                                            data-operator="OR">
-                                        <i class="fa vang" style="background-color:#F1C40F;"></i>
-                                        49.3
-                                    </label>
-                                </span>
-                            </li>
-
-                            <li class="filter-item  filter-item--check-box filter-item--green">
-                                <span>
-                                    <label for="filter-tmt44">
-                                        <input type="checkbox" id="filter-tmt44" data-group="tagtmt"
-                                            data-field="variants.title" data-text="50" value="(50)" data-operator="OR">
-                                        <i class="fa vang" style="background-color:#F1C40F;"></i>
-                                        50
-                                    </label>
-                                </span>
-                            </li>
-
-                            <li class="filter-item  filter-item--check-box filter-item--green">
-                                <span>
-                                    <label for="filter-tmt45">
-                                        <input type="checkbox" id="filter-tmt45" data-group="tagtmt"
-                                            data-field="variants.title" data-text="51" value="(51)" data-operator="OR">
-                                        <i class="fa vang" style="background-color:#F1C40F;"></i>
-                                        51
-                                    </label>
-                                </span>
-                            </li>
-
-                        </ul>
-                    </div>
-                </aside>
-
-
-                <aside class="aside-item filter-tag-style-1">
-                    <div class="aside-title">
-                        <h2 class="title-head margin-top-0"><span>Màu sắc</span></h2>
-                        <i class="fa fa-angle-down"></i>
-
-                    </div>
-                    <div class="aside-content filter-group clearfix">
-                        <ul style="overflow: visible;">
-
-
-
-
-
-
-
-
-                            <li class="filter-item color filter-item--check-box filter-item--green">
-                                <span>
-                                    <label for="filter-vang1">
-                                        <input type="checkbox" id="filter-vang1" data-group="tag1"
-                                            data-field="variants.title" data-text="Vàng" value="(BLACK)"
-                                            data-operator="OR">
-                                        <i class="fa vang" style="background-color:#090909;"></i>
-                                        BLACK
-                                    </label>
-                                </span>
-                            </li>
-
-
-
-
-
-
-
-
-
-                            <li class="filter-item color filter-item--check-box filter-item--green">
-                                <span>
-                                    <label for="filter-vang2">
-                                        <input type="checkbox" id="filter-vang2" data-group="tag1"
-                                            data-field="variants.title" data-text="Vàng" value="(PURPLE)"
-                                            data-operator="OR">
-                                        <i class="fa vang" style="background-color:#b033de;"></i>
-                                        PURPLE
-                                    </label>
-                                </span>
-                            </li>
-
-
-
-
-
-
-
-
-
-                            <li class="filter-item color filter-item--check-box filter-item--green">
-                                <span>
-                                    <label for="filter-vang3">
-                                        <input type="checkbox" id="filter-vang3" data-group="tag1"
-                                            data-field="variants.title" data-text="Vàng" value="(RED)"
-                                            data-operator="OR">
-                                        <i class="fa vang" style="background-color:#ff0000;"></i>
-                                        RED
-                                    </label>
-                                </span>
-                            </li>
-
-
-
-
-
-
-
-
-
-                            <li class="filter-item color filter-item--check-box filter-item--green">
-                                <span>
-                                    <label for="filter-vang4">
-                                        <input type="checkbox" id="filter-vang4" data-group="tag1"
-                                            data-field="variants.title" data-text="Vàng" value="(GREEN)"
-                                            data-operator="OR">
-                                        <i class="fa vang" style="background-color:#23d53e;"></i>
-                                        GREEN
-                                    </label>
-                                </span>
-                            </li>
-
-
-
-
-
-
-
-
-
-                            <li class="filter-item color filter-item--check-box filter-item--green">
-                                <span>
-                                    <label for="filter-vang5">
-                                        <input type="checkbox" id="filter-vang5" data-group="tag1"
-                                            data-field="variants.title" data-text="Vàng" value="(PINK)"
-                                            data-operator="OR">
-                                        <i class="fa vang" style="background-color:#f44bbb;"></i>
-                                        PINK
-                                    </label>
-                                </span>
-                            </li>
-
-
-
-
-
-
-
-
-
-                            <li class="filter-item color filter-item--check-box filter-item--green">
-                                <span>
-                                    <label for="filter-vang6">
-                                        <input type="checkbox" id="filter-vang6" data-group="tag1"
-                                            data-field="variants.title" data-text="Vàng" value="(ORANGE)"
-                                            data-operator="OR">
-                                        <i class="fa vang" style="background-color:#ff7200;"></i>
-                                        ORANGE
-                                    </label>
-                                </span>
-                            </li>
-
-
-
-
-
-
-
-
-
-                            <li class="filter-item color filter-item--check-box filter-item--green">
-                                <span>
-                                    <label for="filter-vang7">
-                                        <input type="checkbox" id="filter-vang7" data-group="tag1"
-                                            data-field="variants.title" data-text="Vàng" value="(BLUE)"
-                                            data-operator="OR">
-                                        <i class="fa vang" style="background-color:#0065ff;"></i>
-                                        BLUE
-                                    </label>
-                                </span>
-                            </li>
-
-
-
-
-
-
-
-
-
-                            <li class="filter-item color filter-item--check-box filter-item--green">
-                                <span>
-                                    <label for="filter-vang8">
-                                        <input type="checkbox" id="filter-vang8" data-group="tag1"
-                                            data-field="variants.title" data-text="Vàng" value="(WHITE)"
-                                            data-operator="OR">
-                                        <i class="fa vang" style="background-color:#ffffff;"></i>
-                                        WHITE
-                                    </label>
-                                </span>
-                            </li>
-
-
-
-
-
-
-
-
-
-                            <li class="filter-item color filter-item--check-box filter-item--green">
-                                <span>
-                                    <label for="filter-vang9">
-                                        <input type="checkbox" id="filter-vang9" data-group="tag1"
-                                            data-field="variants.title" data-text="Vàng" value="(GREY)"
-                                            data-operator="OR">
-                                        <i class="fa vang" style="background-color:#afafae;"></i>
-                                        GREY
-                                    </label>
-                                </span>
-                            </li>
-
-
-
-
-
-
-
-
-
-
-
-                        </ul>
-                    </div>
-                </aside>
-
-
-
-                <!-- End Lọc theo Tag (Màu sắc)-->
-
-                <!-- Lọc theo tag-->
-
-                <!--End Lọc theo tag-->
-                <!-- Lọc theo tag-->
-
-                <!--End Lọc theo tag-->
-            </div>
-        </aside>
-    </main>
-    <footer class="text-center text-lg-start bg-light text-muted">
-        <!-- Section: Social media -->
-        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-        </section>
-        <!-- Section: Social media -->
-
-        <!-- Section: Links  -->
-        <section class="">
-            <div class="container text-center text-md-start mt-5">
-                <!-- Grid row -->
-                <div class="row mt-3">
-                    <!-- Grid column -->
-                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                        <!-- Content -->
-                        <h6 class="text-uppercase fw-bold mb-4">
-                            <i class="fas fa-gem me-3"></i>Group name
-                        </h6>
-                        <p>
-                            group without people
-                        </p>
-                    </div>
-                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                        <!-- Links -->
-                        <h6 class="text-uppercase fw-bold mb-4">
-                            Products
-                        </h6>
-                        <p>
-                            <a href="#!" class="text-reset">Now Fit</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-reset">Thue Do</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-reset">Bxh</a>
-                        </p>
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                        <!-- Links -->
-                        <h6 class="text-uppercase fw-bold mb-4">
-                            Useful links
-                        </h6>
-                        <p>
-                            <a href="https://www.facebook.com/profile.php?id=100016689363363"
-                                class="text-reset">Facebook</a>
-                        </p>
-                        <p>
-                            <a href="https://www.instagram.com/mecandoitall/" class="text-reset">Instagram</a>
-                        </p>
-                        <p>
-                            <a href="https://github.com/lam3082004" class="text-reset">github</a>
-                        </p>
-                        <p>
-                            <a href="https://medium.com/@lam3082004" class="text-reset">Medium</a>
-                        </p>
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                        <!-- Links -->
-                        <h6 class="text-uppercase fw-bold mb-4">
-                            Contact
-                        </h6>
-                        <p><i class="fas fa-home me-3"></i>Vinh, Nghe An</p>
-                        <p>
-                            lam3082004@gmail.com
-                        </p>
-                        <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
-                        <p><i class="fas fa-print me-3"></i>0948816373</p>
-                    </div>
-                    <!-- Grid column -->
+                <div class="settings-links">
+                    <img src="images/setting.png" class="settings-icon">
+                    <a href="#">Settings & Privacy</a>
+                    <img src="images/arrow.png" width="10px">
                 </div>
-                <!-- Grid row -->
-            </div>
-        </section>
-        <!-- Section: Links  -->
+                <div class="settings-links">
+                    <img src="images/help.png" class="settings-icon">
+                    <a href="#">Help & Support</a>
+                    <img src="images/arrow.png" width="10px">
+                </div>
+                <div class="settings-links">
+                    <img src="images/display.png" class="settings-icon">
+                    <a href="#">Sell (developing)</a>
+                    <img src="images/arrow.png" width="10px">
 
-        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-            © 2021 Copyright:
-            <a class="text-reset fw-bold" href="http://vinhuni.edu.vn/">http://vinhuni.edu.vn/</a>
+                </div>
+                <div class="settings-links">
+                    <img src="images/logout.png" class="settings-icon">
+                    <a href="./Login.html">Logout</a>
+                    <img src="images/arrow.png" width="10px">
+                </div>
+            </div>
         </div>
-        <!-- Copyright -->
-    </footer>
+    </nav>
+
+    <div class="container">
+        <div class="left-sidebar">
+            <div class="imp-links">
+                <a href="#">
+                    <img src="images/news.png">
+                    Latest news
+                </a>
+                <a href="#">
+                    <img src="images/friends.png">
+                    Friends
+                </a>
+                <a href="#">
+                    <img src="images/group.png">
+                    Groups
+                </a>
+                <a href="#">
+                    <img src="images/marketplace.png">
+                    Marketplace
+                </a>
+                <a href="#">
+                    <img src="images/watch.png">
+                    Watch
+                </a>
+                <a href="#">
+                    See More
+                </a>
+            </div>
+            <div class="shortcut-links">
+                <p>Your Shortcuts</p>
+                <a href="#">
+                    <img src="images/shortcut-1.png">
+                    Web Developers
+                </a>
+                <a href="#">
+                    <img src="images/shortcut-2.png">
+                    Web Design Course
+                </a>
+                <a href="#">
+                    <img src="images/shortcut-3.png">
+                    Full Stact Development
+                </a>
+                <a href="#">
+                    <img src="images/shortcut-4.png">
+                    Website Experts
+                </a>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="story-gallery">
+                <div class="story story1">
+                    <img src="images/upload.png">
+                    <p>Post Story</p>
+                </div>
+                <div class="story story2">
+                    <img src="images/member-1.png">
+                    <p>Alison</p>
+                </div>
+                <div class="story story3">
+                    <img src="images/member-2.png">
+                    <p>Jackson</p>
+                </div>
+                <div class="story story4">
+                    <img src="images/member-3.png">
+                    <p>Samona</p>
+                </div>
+                <div class="story story5">
+                    <img src="images/member-4.png">
+                    <p>John</p>
+                </div>
+            </div>
+            <div class="write-post-container">
+                <div class="user-profile">
+                    <img src="images/profile-pic.png">
+                    <div>
+                        <p>John Nicholson</p>
+                        <small>
+                            Public
+                            <i class="fas fa fa-caret-down"></i>
+                        </small>
+                    </div>
+                </div>
+                <div class="post-input-container">
+                    <textarea rows="3" placeholder="What's on your mind, John?"></textarea>
+                    <div class="add-post-links">
+                        <a href="#">
+                            <img src="images/live-video.png">
+                            Live Video
+                        </a>
+                        <a href="#">
+                            <img src="images/photo.png">
+                            Photo/Video
+                        </a>
+                        <a href="#">
+                            <img src="images/feeling.png">
+                            Feeling/Activity
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="images/member-3.png">
+                        <div>
+                            <p>Samona Rose</p>
+                            <span>June 21 2021, 13:40</span>
+                        </div>
+                    </div>
+                    <a href="#">
+                        <i class="fa fa-ellipsis-v"></i>
+                    </a>
+                </div>
+
+                <p class="post-text">Subscribe <span>@LetsTryThis</span> YouTube Channel to watch more videos on website
+                    development and UI Designs.
+                </p>
+                <img src="images/feed-image-1.png" class="post-img">
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div>
+                            <img src="images/like-blue.png">
+                            120
+                        </div>
+                        <div>
+                            <img src="images/comments.png">
+                            19
+                        </div>
+                        <div>
+                            <img src="images/share.png">
+                            120
+                        </div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="images/profile-pic.png">
+                        <i class="fas fa fa-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="images/member-1.png">
+                        <div>
+                            <p>Alison Mina</p>
+                            <span>June 21 2021, 3:40</span>
+                        </div>
+                    </div>
+                    <a href="#">
+                        <i class="fa fa-ellipsis-v"></i>
+                    </a>
+                </div>
+
+                <p class="post-text"></p>
+                <img src="images/feed-image-2.png" class="post-img">
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div>
+                            <img src="images/like.png">
+                            120
+                        </div>
+                        <div>
+                            <img src="images/comments.png">
+                            19
+                        </div>
+                        <div>
+                            <img src="images/share.png">
+                            120
+                        </div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="images/profile-pic.png">
+                        <i class="fas fa fa-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="images/profile-pic.png">
+                        <div>
+                            <p>John Nicholson</p>
+                            <span>June 21 2021, 13:40</span>
+                        </div>
+                    </div>
+                    <a href="#">
+                        <i class="fa fa-ellipsis-v"></i>
+                    </a>
+                </div>
+
+                <p class="post-text">Subscribe <span>@LetsTryThis</span> YouTube Channel to watch more videos on website
+                    development and UI Designs.
+                    <a href="#">#letstrythis</a>
+                    <a href="#">#youtube</a>
+                </p>
+                <img src="images/feed-image-3.png" class="post-img">
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div>
+                            <img src="images/like.png">
+                            120
+                        </div>
+                        <div>
+                            <img src="images/comments.png">
+                            19
+                        </div>
+                        <div>
+                            <img src="images/share.png">
+                            120
+                        </div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="images/profile-pic.png">
+                        <i class="fas fa fa-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="images/profile-pic.png">
+                        <div>
+                            <p>John Nicholson</p>
+                            <span>June 21 2021, 13:40</span>
+                        </div>
+                    </div>
+                    <a href="#">
+                        <i class="fa fa-ellipsis-v"></i>
+                    </a>
+                </div>
+
+                <p class="post-text"></p>
+                <img src="images/feed-image-4.png" class="post-img">
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div>
+                            <img src="images/like.png">
+                            120
+                        </div>
+                        <div>
+                            <img src="images/comments.png">
+                            19
+                        </div>
+                        <div>
+                            <img src="images/share.png">
+                            120
+                        </div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="images/profile-pic.png">
+                        <i class="fas fa fa-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="images/profile-pic.png">
+                        <div>
+                            <p>John Nicholson</p>
+                            <span>June 21 2021, 13:40</span>
+                        </div>
+                    </div>
+                    <a href="#">
+                        <i class="fa fa-ellipsis-v"></i>
+                    </a>
+                </div>
+
+                <p class="post-text"></p>
+                <img src="images/feed-image-5.png" class="post-img">
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div>
+                            <img src="images/like.png">
+                            120
+                        </div>
+                        <div>
+                            <img src="images/comments.png">
+                            19
+                        </div>
+                        <div>
+                            <img src="images/share.png">
+                            120
+                        </div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="images/profile-pic.png">
+                        <i class="fas fa fa-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="load-more-btn">Load More</button>
+        </div>
+        <div class="right-sidebar">
+            <div class="sidebar-title">
+                <h4>Events</h4>
+                <a href="#">See All</a>
+            </div>
+            <div class="event">
+                <div class="left-event">
+                    <h3>18</h3>
+                    <span>March</span>
+                </div>
+                <div class="right-event">
+                    <h4>Social Media</h4>
+                    <p>
+                        <i class="fa fa-map-marker"></i>
+                        Willson Tech Park
+                    </p>
+                    <a href="#">More Info</a>
+                </div>
+            </div>
+            <div class="event">
+                <div class="left-event">
+                    <h3>22</h3>
+                    <span>June</span>
+                </div>
+                <div class="right-event">
+                    <h4>Mobile Marketing</h4>
+                    <p>
+                        <i class="fa fa-map-marker"></i>
+                        Willson Tech Park
+                    </p>
+                    <a href="#">More Info</a>
+                </div>
+            </div>
+
+            <div class="sidebar-title">
+                <h4>Advertisement</h4>
+                <a href="#">Close</a>
+            </div>
+            <img src="images/advertisement.png" class="sidebar-ads">
+
+            <div class="sidebar-title">
+                <h4>Conversation</h4>
+                <a href="#">Hide Chat</a>
+            </div>
+            <div class="online-list">
+                <div class="online">
+                    <img src="images/member-1.png">
+                </div>
+                <p>Alison Mina</p>
+            </div>
+            <div class="online-list">
+                <div class="online">
+                    <img src="images/member-2.png">
+                </div>
+                <p>Jackson Aston</p>
+            </div>
+            <div class="online-list">
+                <div class="online">
+                    <img src="images/member-3.png">
+                </div>
+                <p>Samona Rose</p>
+            </div>
+            <div class="online-list">
+                <div class="online">
+                    <img src="images/member-4.png">
+                </div>
+                <p>John Doe</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Copyright 2021 - Lets Try This YouTube Channel</p>
+    </div>
+
+    <script src="../js/script.js"></script>
 </body>
-<script src="./bootstrap.bundle.min.js"></script>
-<script type="text/javascript">
-    var nav = document.querySelector('nav');
-
-    window.addEventListener('scroll', function () {
-        if (window.pageYOffset > 100) {
-            nav.classList.add('bg-dark', 'shadow');
-        } else {
-            nav.classList.remove('bg-dark', 'shadow');
-        }
-    });
-
-</script>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
 
 </html>

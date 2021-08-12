@@ -8,7 +8,7 @@ body {
 }
 
 .banner-image {
-    background-image: url('../img/banner-img.jpg');
+    background-image: url('../images/banner-image');
     background-size: cover;
 }
 
