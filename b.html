@@ -15,7 +15,7 @@
 
 <body>
     <header>
-        <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3 mr-1">
             <div class="container">
                 <a class="navbar-brand" href="b.html">Now Fit</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -25,22 +25,41 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <div class="mx-auto"></div>
                     <ul class="navbar-nav">
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a class="nav-link text-black-50" href="b.html">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-white" href="controller/OutFit.html">OutFit</a>
                         </li>
-                        <!-- <li class="nav-item">
+                        <li class="nav-item">
                             <a class="nav-link text-white" href="controller/Blog.html">Blog</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-white" href="controller/feedback.html">Feedback</a>
-                        </li> -->
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link text-white" href="#">Contact</a>
-                        </li>
-                        <li class="nav-item dropdown">
+                        </li> -->
+                        <div class="nav-left">
+                            <!-- <img src="images/logo.png" class="logo"> -->
+                            <ul>
+                                <li>
+                                    <a class="nav-link text-black-50" href="controller/OutFit.html">
+                                        <img src="images/home.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <img src="images/video.png">
+                                </li>
+                                <li>
+                                    <img src="images/inbox.png">
+                                </li>
+                                <li>
+                                    <img src="images/notification.png">
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-white" id="navbarDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Hữu Trường
@@ -53,8 +72,48 @@
                         <li class="nav-item">
                             <img src="images/profile-pic.png">
                         </li>
-                        </li>
+                        </li> -->
                     </ul>
+                    <div class="nav-right">
+                        <div class="nav-user-icon online" onclick="settingsMenuToggle();">
+                            <img id="profile" src="images/profile-pic.png">
+                        </div>
+                    </div>
+                    <div class="settings-menu">
+                        <div id="dark-btn">
+                            <span></span>
+                        </div>
+                        <div class="settings-menu-inner bg-light">
+                            <div class="user-profile">
+                                <img src="images/profile-pic.png">
+                                <div>
+                                    <p>Hữu Trường</p>
+                                    <a href="#">See Your Profile</a>
+                                </div>
+                            </div>
+
+                            <div class="settings-links">
+                                <img src="images/setting.png" class="settings-icon">
+                                <a href="#">Settings & Privacy</a>
+                                <img id="anh" src="images/arrow.png" width="10px">
+                            </div>
+                            <div class="settings-links">
+                                <img src="images/help.png" class="settings-icon">
+                                <a href="#">Help & Support</a>
+                                <img id="anh" src="images/arrow.png" width="10px">
+                            </div>
+                            <div class="settings-links">
+                                <img src="images/display.png" class="settings-icon">
+                                <a href="#">Sell (developing)</a>
+                                <img id="anh" src="images/arrow.png" width="10px">
+                            </div>
+                            <div class="settings-links">
+                                <img src="images/logout.png" class="settings-icon">
+                                <a href="./Login.html">Logout</a>
+                                <img id="anh" src="images/arrow.png" width="10px">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -205,5 +264,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
+<script src="./js/script.js"></script>
 
 </html>
