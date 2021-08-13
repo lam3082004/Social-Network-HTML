@@ -19,6 +19,7 @@
     width: 280px;
     height: 30px;
     margin-bottom: 5px;
+        border-radius: 5px;
 }
 
 ::-webkit-input-placeholder {
