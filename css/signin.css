@@ -2,16 +2,16 @@
     /* margin-left:1000px; */
     width: 360px;
     height: 390px;
-    border: 1px solid rgb(182, 181, 181);
-    border-radius: 1px;
+    border: 2px solid rgb(182, 181, 181);
+    border-radius: 10px;
     text-align: center;
     background-color: #fff;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 .login h1 {
-    color: #868787;
+    color: #2c3131;
     font-family: sans-serif;
 }
 
@@ -46,22 +46,22 @@
 }
 
 .icon-facebook {
-    width: 40px;
+    width: 30px;
     padding-right: 5px;
 }
 
 .icon-google {
-    width: 41px;
+    width: 30px;
     padding-right: 5px;
 }
 
 .icon-zalo {
-    width: 40px;
+    width: 30px;
     padding-right: 5px;
 }
 
 .icon-instagram {
-    width: 40px;
+    width: 30px;
 }
 
 .signin {
@@ -69,10 +69,11 @@
     margin-top: 12px;
     width: 360px;
     height: 50px;
-    border: 1px solid rgb(182, 181, 181);
+    border: 2px solid rgb(182, 181, 181);
     border-radius: 1px;
     text-align: center;
     border-radius: 10px;
+    background-color: white;
 }
 
 .signin p {
@@ -95,12 +96,12 @@
 
 .anhnen {
     position: absolute;
-    left: 100px;
+    left: 140px;
     top: 100px;
     height: 400px;
     padding-top: 60px;
 }
 
 body {
-    background-color: rgba(var(--b3f, 250, 250, 250), 1);
+    background-color: rgb(241, 241, 228);
 }

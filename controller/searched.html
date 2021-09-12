@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" type="text/css" href="../css/searched.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/js" href="./js/a.js">
+    <!--<title> Responsive Sidebar Menu  | CodingLab </title>-->
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="boxicons/css/boxicons.min.css">
+    <title>Tìm kiếm kết quả cho...</title>
+   </head>
+
+<body>
+   <nav>
+        <div class ="chugoctraitren">
+         <h2>Nowfit</h2>
+        </div>
+        <div class="logogoctrai">
+          <img src="../images/logo24.png">
+        </div> 
+        <div class="search-box">
+            <input type="text" placeholder="Search">
+            <a href="https://www.facebook.com/watch"><i class="fa fa-search" aria-hidden="true" style="left:15px;position: absolute;color: gray;top:10px;"></i></a>
+
+        </div>
+        <div class="nav-left">
+            <!-- <img src="images/logo.png" class="logo"> -->
+            <ul>
+                <li>
+                    <a href="OutFit.html">
+                      <i class="fa fa-home" aria-hidden="true" style="color: black; font-size: 20px;position: absolute;right:360px;top: 20px;"
+></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/watch">
+                        <i class="fa fa-comments" aria-hidden="true" style="color: black; font-size: 20px;position: absolute;right:310px;top: 20px;"></i>
+                    </a>
+                </li>
+                <li>
+                    <i class="fa fa-envelope" aria-hidden="true" style="color: black; font-size: 20px;position: absolute;right:260px;top: 20px;"></i>
+                </li>
+                <li>
+                    <i class="fa fa-paper-plane" aria-hidden="true" style="color: black; font-size: 20px;position: absolute;right:210px;top: 20px;"></i>
+
+                </li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <div class="nav-user-icon online" onclick="settingsMenuToggle();">
+                <img src="images/profile-pic.png">
+            </div>
+        </div>
+        <div class="settings-menu">
+            <div id="dark-btn">
+                <span></span>
+            </div>
+            <div class="settings-menu-inner">
+                <div class="user-profile">
+                    <img src="images/profile-pic.png">
+                    <div>
+                        <p>Hữu Trường</p>
+                        <a href="#">See Your Profile</a>
+                    </div>
+                </div>
+
+                <div class="settings-links">
+                    <img src="images/setting.png" class="settings-icon">
+                    <a href="../controller/setting.html">Settings & Privacy</a>
+                    <img src="images/arrow.png" width="10px">
+                </div>
+                <div class="settings-links">
+                    <img src="images/help.png" class="settings-icon">
+                    <a href="../controller/feedback.html">Help & Support</a>
+                    <img src="images/arrow.png" width="10px">
+                </div>
+                <div class="settings-links">
+                    <img src="images/display.png" class="settings-icon">
+                    <a href="#">Sell (developing)</a>
+                    <img src="images/arrow.png" width="10px">
+
+                </div>
+                <div class="settings-links">
+                    <img src="images/logout.png" class="settings-icon">
+                    <a href="./Login.html">Logout</a>
+                    <img src="images/arrow.png" width="10px">
+                </div>
+            </div>
+        </div>
+</nav>
+  <div class="sidebar close">
+    <div class="logo-details">
+      
+    </div>
+    <div class="home-content">
+      <i class="bx bx-menu" style="color:black; position:absolute;font-size:30px;top:15px;left:25px"></i>
+     
+    </div>
+    <ul class="nav-links">
+      
+      <li>
+        <div class="iocn-link">
+          <a href="#">
+           <img src="../images/capture4.png">
+            <span class="link_name">Độ tuổi</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">Độ tuổi</a></li>
+          <li><a href="#">16 - 25 tuổi</a></li>
+          <li><a href="#">26 - 31 tuổi</a></li>
+          <li><a href="#">32 - 42 tuổi</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="#">
+            <img src="../images/capture3.png">
+            <span class="link_name">Quần </span>
+          </a>
+          <i class='bx bxs-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">Quần</a></li>
+          <li><a href="#">Hãng</a></li>
+          <li><a href="#">Kiểu</a></li>
+          <li><a href="#">V2</a></li>
+        </ul>
+      </li>
+      <li>
+      <div class="iocn-link">
+          <a href="#">
+            <img src="../images/capture1.png">
+            <span class="link_name">Giày  </span>
+          </a>
+          <i class='bx bxs-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">Giày</a></li>
+          <li><a href="#">Hãng</a></li>
+          <li><a href="#">Kiểu</a></li>
+          <li><a href="#">Size</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="#">
+            <img src="../images/capture2.png" >
+            <span class="link_name">Áo</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">Áo</a></li>
+          <li><a href="#">Kiểu</a></li>
+          <li><a href="#">Hãng </a></li>
+          <li><a href="#">V2</a></li>
+        </ul>
+      </li>
+        
+      <li>
+        <a href="#">
+          <i class='bx bx-compass' ></i>
+          <span class="link_name">Khám phá</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Khám phá</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-history'></i>
+          <span class="link_name">Lịch sử</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Lịch sử</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-cog' ></i>
+          <span class="link_name">Cài đặt</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Cài đặt</a></li>
+        </ul>
+      </li>
+      <li>
+    
+  </li>
+</ul>
+  </div>
+  <section class="home-section">
+  
+    <div class="home-content">
+              <div class="loc" >
+              <a href="#">Đánh giá</a>
+              </div>
+              <div class="loc" >
+              <a href="#">Lượt xem</a>
+              </div>
+               <div class="loc" >
+              <a href="#">Tương tác</a>
+              </div>
+              <div class="loc" >
+              <a href="#">Đánh giá</a>
+              </div>
+              <div class="loc">
+              <a href="#">Sở thích</a>
+              </div>
+       <div class="container" style="top:50px">
+         <div class="card" >
+         <img src="https://i.pinimg.com/236x/e8/07/d7/e807d769eb99d7184420030c066d2388.jpg">
+          <i class="bx bx-dislike" ></i>
+         <i class="bx bx-heart" ></i>
+           <p class="like" >115.5k</p>
+           <p class="dislike" >4037</p>
+          <div class="content">
+            <h2>01</h2>
+            <h3>@Sup.supreme</h3>
+            <p>Hello everybody, today we will showw you something news about your outfit.
+            This post will have many things to talk about!!<p> 
+            <a href="#">Xem thêm</a>
+     </div>
+    </div>
+     <div class="card" >
+     <img src="https://thegioidienanh.vn/stores/news_dataimages/anhvu/062021/26/13/0648_1._Asa_Butterfield.jpg?rt=20210626130711">
+      <i class="bx bx-dislike"></i>
+      <i class="bx bx-heart"></i>
+       <p class="like" >101.3k</p>
+   <p class="dislike" >2.3k</p>
+      <div class="content">
+         <h2>02</h2>
+            <h3>@but.ht</h3>
+            <p>Nếu như ngày xưa ấy trái tim anh vãn vươn bên thềm
+            nhà ta quên đi bầu trời lẽ loi sâu bên trong chiecs áo tình nồn
+            chỉ có đôita, ngàn dao đâm ngàn lời khúc hát xưa.<p> 
+            <a href="#">Xem thêm</a>
+     </div>
+    </div>
+      <div class="card">
+      <i class="bx bx-dislike"></i>
+      <i class="bx bx-heart"></i>
+       <p class="like" >90.7k</p>
+   <p class="dislike" >1015</p>
+      <img src="https://menback.com/wp-content/uploads/2021/05/cach-mac-dep-vao-mua-he-nam-564x846.jpg">
+      <div class="content">
+            <h2>03</h2>
+            <h3>@murph.milo</h3>
+            <p>Nếu như ngày xưa ấy trái tim anh vãn vươn bên thềm
+            nhà ta quên đi bầu trời lẽ loi sâu bên trong chiecs áo tình nồn
+            chỉ có đôi ta, ngàn dao đâm ngàn lời khúc hát xưa.<p> 
+            <a href="#">Xem thêm</a>
+     </div>
+    </div>
+    <div class="card" >
+    <i class="bx bx-dislike"></i>
+      <i class="bx bx-heart"></i>
+       <p class="like" >72k</p>
+   <p class="dislike" >5.6k</p>
+    <img src="https://www.stylesofman.com/wp-content/uploads/2020/10/b6ecc4c2e444a0fc6fe4c33b2a6637ea.jpg">
+      <div class="content">
+            <h2>04</h2>
+            <h3>@jacky.boy242</h3>
+            <p>Nếu như ngày xưa ấy trái tim anh vãn vươn bên thềm
+            nhà ta quên đi bầu trời lẽ loi sâu bên trong chiecs áo tình nồn
+            chỉ có đôi ta, ngàn dao đâm ngàn lời khúc hát xưa.<p> 
+            <a href="#">Xem thêm</a>
+     </div>
+    </div>
+     <div class="card" >
+     <i class="bx bx-dislike"></i>
+      <i class="bx bx-heart"></i>
+       <p class="like" >115.5k</p>
+   <p class="dislike" >4037</p>
+      <img src="https://i.pinimg.com/564x/e3/08/f0/e308f059a064350f2a022fa2b430507b.jpg">
+      <div class="content">
+            <h2>05</h2>
+            <h3>@khaitran</h3>
+            <p>Nếu như ngày xưa ấy trái tim anh vãn vươn bên thềm
+            nhà ta quên đi bầu trời lẽ loi sâu bên trong chiecs áo tình nồn
+            chỉ có đôi ta, ngàn dao đâm ngàn lời khúc hát xưa.<p> 
+            <a href="#">Xem thêm</a>
+     </div>
+    </div>
+    <div class="card" >
+    <i class="bx bx-dislike"></i>
+      <i class="bx bx-heart"></i>
+       <p class="like" >115.5k</p>
+   <p class="dislike" >4037</p>
+            <img src="../images/status-2.png">     
+      <div class="content">
+            <h2>06</h2>
+            <h3>@dcotine.ne</h3>
+            <p>Nếu như ngày xưa ấy trái tim anh vãn vươn bên thềm
+            nhà ta quên đi bầu trời lẽ loi sâu bên trong chiecs áo tình nồn
+            chỉ có đôi ta, ngàn dao đâm ngàn lời khúc hát xưa.<p> 
+            <a href="#">Xem thêm</a>
+     </div>
+    </div>
+    <div class="card">
+    <i class="bx bx-dislike"></i>
+      <i class="bx bx-heart"></i>
+       <p class="like" >115.5k</p>
+   <p class="dislike" >4037</p>
+     <img src="https://i.pinimg.com/564x/00/fe/04/00fe04974560e7d733cb3a6d0bcd0cb6.jpg">
+      <div class="content">
+            <h2>07</h2>
+            <h3>Card Three</h3>
+            <p>Nếu như ngày xưa ấy trái tim anh vãn vươn bên thềm
+            nhà ta quên đi bầu trời lẽ loi sâu bên trong chiecs áo tình nồn
+            chỉ có đôi ta, ngàn dao đâm ngàn lời khúc hát xưa.<p> 
+            <a href="#">Xem thêm</a>
+     </div>
+    </div>
+    <div class="card" >
+    <i class="bx bx-dislike"></i>
+      <i class="bx bx-heart"></i>
+       <p class="like" >115.5k</p>
+   <p class="dislike" >4037</p>
+       <img src="../images/status-3.png">
+      <div class="content" >
+            <h2>08</h2>
+            <h3>Card Three</h3>
+            <p>Nếu như ngày xưa ấy trái tim anh vãn vươn bên thềm
+            nhà ta quên đi bầu trời lẽ loi sâu bên trong chiecs áo tình nồn
+            chỉ có đôi ta, ngàn dao đâm ngàn lời khúc hát xưa.<p> 
+            <a href="#">Xem thêm</a>
+     </div>
+    </div><div class="card" >
+    <i class="bx bx-dislike"></i>
+      <i class="bx bx-heart"></i>
+       <p class="like" >115.5k</p>
+   <p class="dislike" >4037</p>
+         <img src="https://i.pinimg.com/736x/5e/16/bc/5e16bc4cc916b15ef026a9987388b81c.jpg">
+      <div class="content">
+            <h2>09</h2>
+            <h3>Card Three</h3>
+            <p>Nếu như ngày xưa ấy trái tim anh vãn vươn bên thềm
+            nhà ta quên đi bầu trời lẽ loi sâu bên trong chiecs áo tình nồn
+            chỉ có đôi ta, ngàn dao đâm ngàn lời khúc hát xưa.<p> 
+            <a href="#">Xem thêm</a>
+     </div>
+    </div>
+</div> 
+</div>
+
+    
+   </section>
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script>
+ 
+  let arrow = document.querySelectorAll(".arrow");
+  for (var i = 0; i < arrow.length; i++) {
+    arrow[i].addEventListener("click", (e)=>{
+   let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
+   arrowParent.classList.toggle("showMenu");
+    });
+  }
+  let sidebar = document.querySelector(".sidebar");
+  let sidebarBtn = document.querySelector(".bx-menu");
+  console.log(sidebarBtn);
+  sidebarBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("close");
+  });
+  </script>
+</body>
+</html>

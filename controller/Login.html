@@ -3,35 +3,77 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/login.css">
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="./css/a.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.css">
     <link rel="stylesheet" type="text/js" href="./js/a.js">
 </head>
 
 <body>
-    <div>
-        <img src="../images/login.jpg" class="anhnen">
-        <div class="login-locate">
-            <div class="login">
-                <h1>OutFit</h1>
-                <br>
-                <input type="text" placeholder="Số điện thoại, tên người dùng hoặc Email">
-                <input type="password" placeholder="Mật khẩu">
-                <button onclick="document.location='../b.html'"><b>Đăng nhập</b></button>
-                <h5>Quên mật khẩu?</h5>
-                <div>
-                    <img src="../images/face-icon.png" class="icon-facebook">
-                    <img src="../images/mail-icon.png" class="icon-google">
-                    <img src="../images/zalo-icon.png" class="icon-zalo">
-                    <img src="../images/insta-icon.png" class="icon-instagram">
-                </div>
-            </div>
-            <div class="signin">
-                <p>Bạn chưa có tài khoản?<a href="Signin.html" style="text-decoration:none"> Đăng ký</a></p>
-            </div>
-        </div>
-    </div>
+     
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form action="#">
+			<h1>Tạo tài khoản</h1>
+			<div class="social-container">
+				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+			<span>Hoặc sử dụng</span>
+			<input type="text" placeholder="Tên đăng nhập" />
+			<input type="email" placeholder="Email" />
+			<input type="password" placeholder="Mật khẩu" />
+			<button>Đăng ký</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form action="#">
+			<h1>Đăng nhập</h1>
+			<div class="social-container">
+				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+			<span>Hoặc đăng nhập bằng</span>
+			<input type="email" placeholder="Tài khoản" />
+			<input type="password" placeholder="Mật khẩu" />
+			<a href="#">Quên mật khẩu?</a>
+			<button ><a href="OutFit.html" style="color:white;">Đăng nhập</a></button>
+			
+			
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Nowfit.com</h1>
+				<p>Hãy đăng ký tài khoản để nâng cao trải nghiệm của bạn</p>
+				<button class="ghost" id="signIn">Đăng nhập</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Nowfit.com</h1>
+				<p>Hãy để chúng tôi đưa bạn đến những trải nghiệm mới</p>
+				<button class="ghost" id="signUp">Đăng ký </button>
+			</div>
+		</div>
+	</div>
+</div>
 </body>
 
+<script>
+const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const container = document.getElementById('container');
+
+signUpButton.addEventListener('click', () => {
+	container.classList.add("right-panel-active");
+});
+
+signInButton.addEventListener('click', () => {
+	container.classList.remove("right-panel-active");
+});
+</script>
 </html>
